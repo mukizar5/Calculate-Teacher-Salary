@@ -24,5 +24,18 @@ Teacher josh = new Teacher
 
 // leticia.DisplayTeacherDetails();
 
+Teacher leticia = new Teacher
+{
+    Name = "leticia",
+    Email = "leticia@yahoo.com",
+    BirthDay = new DateOnly(1987, 6, 3),
+    Subject = SubjectsTaught.mathematics,
+    Status = MaritalStatus.married,
+    Grade = Grades.grade6
+};
+
 decimal salary = josh.CalculateSalaryByGrade(josh.Grade);
 Console.WriteLine($"The salary received by {josh.Name} is: {salary}");
+
+decimal salaryleticia = leticia.CalculateSalaryByGrade(leticia.Grade);
+Console.WriteLine($"The salary received by {leticia.Name} is: {salary}");
