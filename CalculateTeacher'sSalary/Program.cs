@@ -4,19 +4,29 @@ Teacher josh = new Teacher(
  "josh5@gmail.com",
  new DateOnly(1996, 4, 15),
  Status.MaritalStatus.married,
-  Subjects.SubjectTaught.mathematics
-
+ Subjects.SubjectTaught.mathematics,
+ Grade.Grades.grade3
 );
 
-Teacher leticia = new Teacher(
-    "leticia", 
-    "leticia@yahoo.com",
-    new DateOnly(1992, 03, 23),
+Teacher leticia = new Teacher { 
+    Name="leticia", 
+    Email="leticia@yahoo.com",
+    birthday=new DateOnly(1992, 03, 23),
     Status.MaritalStatus.single, 
-    Subjects.SubjectTaught.english);
+    Subjects.SubjectTaught.english,
+    Grade.Grades.grade6
+);
+
+var edema = new Teacher(
+    "Edema",
+    "micheal@gmail.com",
+    new DateOnly(1995, 03, 31),
+    Status.MaritalStatus.widower,
+    Subjects.SubjectTaught.biology,
+    Grade.Grades.grade1
+);
 
 leticia.DisplayTeacherDetails();
+edema.DisplayTeacherDetails();
 
-Grade.Grades teacherGrade = Grade.Grades.grade5; // Assuming the teacher teaches grade 5
-decimal salary = Grade.CalculateSalaryByGrade(teacherGrade);
-Console.WriteLine($"The salary recieved by the teacher for teaching {teacherGrade} is: {salary}");
+
